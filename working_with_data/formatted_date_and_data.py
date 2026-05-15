@@ -2,6 +2,7 @@ import requests
 from datetime import datetime, timedelta
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
 # Calculate dates
 today = datetime.now()
@@ -53,3 +54,12 @@ plt.tight_layout()
 # Save the plot
 plt.savefig('weather_chart.png')
 plt.show()
+
+
+# Create data folder if it doesn't exist
+if not os.path.exists('data'):
+    os.makedirs('data')
+
+# Save to CSV
+df.to_csv('data/paris_weather.csv', index=False)
+print("Data saved to data/paris_weather.csv")

@@ -29,6 +29,8 @@ df = pd.DataFrame({
     'max_temp': daily_data['temperature_2m_max'],
     'min_temp': daily_data['temperature_2m_min']
 })
+avrg_temp= df['min_temp'].mean()
+print(f'Average temperature is {avrg_temp}')
 
 # Convert date strings to datetime
 df['date'] = pd.to_datetime(df['date'])

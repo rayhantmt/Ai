@@ -1,19 +1,16 @@
-import numpy as np
-a = np.arange(15).reshape(3, 5)
-a
-a.shape
-print(a)
-a.ndim
-print(a.ndim)
-a.dtype.name
-print(a.dtype.name)
-a.itemsize
-print(f'{a.itemsize} is the item size of a')
-a.size
-print(f'{a.size} is the size of a')
-type(a)
-print(type(a))
-b = np.array([6, 7, 8])
-b
-print(b)
-type(b)
+def reverseinteger():
+    integer = int(input("Enter an integer: "))
+   # reversed_integer = 0
+    while integer > 0:
+        digit = integer % 10
+        reversed_integer = (reversed_integer * 10) + digit
+        integer //= 10
+    print(f"Reversed integer: {reversed_integer}")
+    while integer < 0:
+        digit = integer % 10
+        reversed_integer = (reversed_integer * 10) + digit
+        integer //= 10
+    print(f"Reversed integer: {reversed_integer}")
+
+reverseinteger()
+    

@@ -20,7 +20,6 @@ class DataValidator:
 
 # Use the validator
 validator = DataValidator()
-
 validator.validate_email(email="bad-email")
 validator.validate_age(age=200)
 
